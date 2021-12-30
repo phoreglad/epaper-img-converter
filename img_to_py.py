@@ -79,7 +79,6 @@ if args.mode == "L1":
         img = img.convert("1").point(lambda p: p > args.threshold[0] and 255)
         if args.preview_only:
             img.show()
-            img.save("IMG_0182_bw_dither.png")
             exit()
         # In this mode data match FrameBuffer HLSB format, no need for further processing.
         data_bw = bytearray(img.tobytes())
@@ -106,7 +105,6 @@ else:
     img = img.convert("P", dither=Image.FLOYDSTEINBERG if args.dither else Image.NONE).convert("L").point(thr)
     if args.preview_only:
         img.show()
-        img.save("IMG_0182_gs_dither.png")
         exit()
 
     # Convert pixel data to bytearrays for BW and RED RAMs in HLSB format.
