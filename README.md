@@ -78,3 +78,10 @@ py img_to_py.py -m L2 -d test_img\IMG_0182.jpg
 ```
 
 ![image](test_img/IMG_0182_gs_dither.png)
+
+---
+
+# Displaying images
+
+Example showing how to display images on the Pico e-Paper 3.7 display look
+[here](https://github.com/phoreglad/pico-epaper/tree/main/examples).
